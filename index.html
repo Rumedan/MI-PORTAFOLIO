@@ -1,60 +1,11 @@
-
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Objetos JavaScript</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portafolio</title>
 </head>
 <body>
-  <h1>Objetos en JavaScript</h1>
-  <script>
-    let persona = {
-      nombre: "Julio",
-      edad: 35,
-      ciudad: "Santiago"
-    }
-
-    console.log(persona)
-    console.log(persona.nombre)
-    console.log(persona.edad)
-    let persona2 = {
-  nombre: "Julio",
-  edad: 35,
-  saludar: function() {
-    console.log("Hola, soy " + this.nombre + " y tengo " + this.edad + " años")
-  }
-}
-
-persona2.saludar()
-let persona3 = {
-  nombre: "Julio",
-  edad: 35,
-  ciudad: "Santiago"
-}
-
-console.log(Object.keys(persona3))    // nombres de propiedades
-console.log(Object.values(persona3))  // valores
-console.log(Object.entries(persona3)) // pares [clave, valor]
- let persona4 = {
-  nombre: "Julio",
-  edad: 35,
-  ciudad: "Santiago"
-}
-
-for(let clave in persona4) {
-  console.log(clave + ": " + persona4[clave])
-}
-let movimiento = {
-  descripcion: "Depósito",
-  monto: 5000,
-  fecha: "2026-06-14",
-  detalles: {
-    metodo: "Transferencia",
-    banco: "BancoEstado"
-  }
-}
-
-console.log(movimiento.detalles.banco)
- </script>
+  
 </body>
 </html>
