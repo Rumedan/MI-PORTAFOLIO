@@ -1,60 +1,309 @@
-
-
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Objetos JavaScript</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Julio Díaz Henríquez — Backend Developer en formación</title>
+  <meta name="description" content="Portafolio de Julio Díaz Henríquez, desarrollador backend en formación (Node.js, Express, PostgreSQL) con 20+ años de experiencia técnica en sistemas financieros.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-  <h1>Objetos en JavaScript</h1>
-  <script>
-    let persona = {
-      nombre: "Julio",
-      edad: 35,
-      ciudad: "Santiago"
-    }
 
-    console.log(persona)
-    console.log(persona.nombre)
-    console.log(persona.edad)
-    let persona2 = {
-  nombre: "Julio",
-  edad: 35,
-  saludar: function() {
-    console.log("Hola, soy " + this.nombre + " y tengo " + this.edad + " años")
-  }
-}
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="navBar">
+    <div class="container">
+      <a class="navbar-brand" href="#inicio">JD<span class="brand-dot">.</span></a>
 
-persona2.saludar()
-let persona3 = {
-  nombre: "Julio",
-  edad: 35,
-  ciudad: "Santiago"
-}
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-console.log(Object.keys(persona3))    // nombres de propiedades
-console.log(Object.values(persona3))  // valores
-console.log(Object.entries(persona3)) // pares [clave, valor]
- let persona4 = {
-  nombre: "Julio",
-  edad: 35,
-  ciudad: "Santiago"
-}
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#caso-de-estudio">Caso de estudio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-for(let clave in persona4) {
-  console.log(clave + ": " + persona4[clave])
-}
-let movimiento = {
-  descripcion: "Depósito",
-  monto: 5000,
-  fecha: "2026-06-14",
-  detalles: {
-    metodo: "Transferencia",
-    banco: "BancoEstado"
-  }
-}
+  <!-- INICIO -->
+  <section id="inicio">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-7">
+          <p class="eyebrow">Temuco · Padre Las Casas, Chile</p>
+          <h1>Julio Díaz Henríquez</h1>
+          <p class="hero-role">Backend Developer en formación</p>
+          <p class="hero-lede">
+            Más de 20 años dando soporte técnico a equipos financieros en terreno —
+            hoy construyo el software que hay detrás de esos mismos sistemas.
+            Node.js, Express y PostgreSQL, con autenticación y seguridad como
+            punto de partida, no como añadido.
+          </p>
+          <div class="hero-actions">
+            <a href="#proyectos" class="btn btn-primary-custom">Ver proyectos</a>
+            <a href="#contacto" class="btn btn-outline-custom">Contactarme</a>
+          </div>
+        </div>
 
-console.log(movimiento.detalles.banco)
- </script>
+        <div class="col-lg-5">
+          <div class="hero-photo-frame">
+            <img
+              src="./img/retrato-julio.jpg"
+              alt="Foto profesional de Julio Díaz Henríquez"
+              class="hero-photo">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE MI -->
+  <section id="sobre-mi" class="section-alt">
+    <div class="container">
+      <p class="section-kicker">01 · Sobre mí</p>
+      <div class="row gy-5">
+        <div class="col-lg-6">
+          <h2 class="section-title">De mantener cajeros<br>a construir APIs</h2>
+          <p class="section-text">
+            Soy Operador Técnico Integral en Prosegur Cash, en la Región de La
+            Araucanía: doy servicio a equipos MAE y cajeros automáticos para
+            múltiples bancos, con más de dos décadas de experiencia práctica en
+            sistemas financieros reales — los que fallan a las tres de la
+            mañana y hay que dejar funcionando.
+          </p>
+          <p class="section-text">
+            Estoy transicionando hacia el desarrollo backend con esa misma
+            exigencia: cada API que construyo la pruebo con evidencia real
+            (casos de éxito y de error), documento las decisiones técnicas, y
+            trato la seguridad como parte del diseño desde el primer commit,
+            no como un parche al final.
+          </p>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="skills-block">
+            <h3 class="skills-heading">Backend</h3>
+            <div class="skills-tags">
+              <span class="tag tag-backend">Node.js</span>
+              <span class="tag tag-backend">Express</span>
+              <span class="tag tag-backend">PostgreSQL</span>
+              <span class="tag tag-backend">Sequelize</span>
+              <span class="tag tag-backend">JWT</span>
+              <span class="tag tag-backend">REST APIs</span>
+            </div>
+          </div>
+
+          <div class="skills-block">
+            <h3 class="skills-heading">Frontend</h3>
+            <div class="skills-tags">
+              <span class="tag tag-frontend">HTML5</span>
+              <span class="tag tag-frontend">CSS3</span>
+              <span class="tag tag-frontend">JavaScript ES6</span>
+              <span class="tag tag-frontend">Bootstrap</span>
+            </div>
+          </div>
+
+          <div class="skills-block">
+            <h3 class="skills-heading">Herramientas</h3>
+            <div class="skills-tags">
+              <span class="tag tag-tools">Git &amp; GitHub</span>
+              <span class="tag tag-tools">Postman</span>
+              <span class="tag tag-tools">Linux</span>
+              <span class="tag tag-tools">PostgreSQL / psql</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section id="proyectos">
+    <div class="container">
+      <p class="section-kicker">02 · Proyectos</p>
+      <h2 class="section-title">Trabajo que puedes revisar</h2>
+
+      <div class="project-list">
+
+        <article class="project-row">
+          <div class="project-row-main">
+            <h3>node-express-web-app</h3>
+            <p>
+              API RESTful de gestión de usuarios: Node.js + Express + PostgreSQL,
+              con ORM (Sequelize), transacciones con rollback, autenticación JWT
+              y subida de archivos validada. Repositorio con 22 commits
+              organizados y más de 40 pruebas funcionales documentadas.
+            </p>
+            <div class="project-tags">
+              <span class="tag tag-backend">Node.js</span>
+              <span class="tag tag-backend">Express</span>
+              <span class="tag tag-backend">PostgreSQL</span>
+              <span class="tag tag-backend">JWT</span>
+            </div>
+          </div>
+          <div class="project-row-link">
+            <a href="https://github.com/Rumedan/node-express-web-app" target="_blank" rel="noopener">
+              Ver repositorio →
+            </a>
+          </div>
+        </article>
+
+        <article class="project-row">
+          <div class="project-row-main">
+            <h3>TaskFlow</h3>
+            <p>
+              Aplicación web de gestión de tareas desarrollada con JavaScript
+              ES6, programación orientada a objetos y arquitectura modular.
+            </p>
+            <div class="project-tags">
+              <span class="tag tag-frontend">JavaScript</span>
+              <span class="tag tag-frontend">POO</span>
+            </div>
+          </div>
+          <div class="project-row-link">
+            <a href="https://github.com/Rumedan/TaskFlow" target="_blank" rel="noopener">
+              Ver repositorio →
+            </a>
+          </div>
+        </article>
+
+        <article class="project-row">
+          <div class="project-row-main">
+            <h3>javascript-practicas</h3>
+            <p>
+              Prácticas y ejercicios del curso, aplicando fundamentos de
+              JavaScript: manipulación del DOM, funciones, estructuras de
+              control y lógica de programación.
+            </p>
+            <div class="project-tags">
+              <span class="tag tag-frontend">JavaScript</span>
+              <span class="tag tag-frontend">HTML5</span>
+            </div>
+          </div>
+          <div class="project-row-link">
+            <a href="https://github.com/Rumedan/javascript-practicas" target="_blank" rel="noopener">
+              Ver repositorio →
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CASO DE ESTUDIO -->
+  <section id="caso-de-estudio" class="section-alt">
+    <div class="container">
+      <p class="section-kicker">03 · Caso de estudio</p>
+      <h2 class="section-title">API RESTful segura con autenticación JWT</h2>
+      <p class="section-text case-intro">
+        De los tres proyectos, este es el que mejor muestra cómo pienso un
+        backend: no solo que funcione, sino que sea seguro por diseño y esté
+        probado con evidencia real antes de darlo por terminado.
+      </p>
+
+      <div class="case-grid">
+        <div class="case-item">
+          <h3>Descripción</h3>
+          <p>Backend construido con Node.js y Express, desarrollado en tres
+          etapas: servidor con vistas dinámicas, persistencia real en
+          PostgreSQL con ORM y transacciones, y finalmente autenticación JWT
+          con subida de archivos.</p>
+        </div>
+
+        <div class="case-item">
+          <h3>Desafío</h3>
+          <p>Diseñar un backend seguro por defecto: que rechace accesos no
+          autorizados, valide tipos de datos antes de tocar la base de datos,
+          y nunca exponga información sensible en ninguna respuesta.</p>
+        </div>
+
+        <div class="case-item">
+          <h3>Solución</h3>
+          <p>Arquitectura en capas (rutas → middlewares → controladores →
+          servicios → repositorio). JWT con expiración de 1 hora, contraseñas
+          hasheadas con bcrypt, validación de tipos antes de la base de datos,
+          transacciones SQL con rollback verificado.</p>
+        </div>
+
+        <div class="case-item">
+          <h3>Herramientas</h3>
+          <p>Node.js, Express 5, PostgreSQL, Sequelize, JSON Web Tokens,
+          bcrypt, Multer, Handlebars + Bootstrap 5.</p>
+        </div>
+
+        <div class="case-item">
+          <h3>Aprendizajes</h3>
+          <p>La seguridad es una decisión de arquitectura desde el principio,
+          no una capa que se agrega al final. También aprendí a diagnosticar
+          errores de entorno reales — la parte del desarrollo que rara vez se
+          enseña.</p>
+        </div>
+
+        <div class="case-item">
+          <h3>Impacto</h3>
+          <p>Más de 40 pruebas funcionales documentadas, 22 commits
+          organizados por tema, clonación desde cero verificada sin errores
+          — simulando la revisión de un evaluador externo.</p>
+        </div>
+      </div>
+
+      <a href="https://github.com/Rumedan/node-express-web-app" target="_blank" rel="noopener" class="btn btn-primary-custom mt-4">
+        Ver el repositorio completo →
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <div class="container">
+      <p class="section-kicker">04 · Contacto</p>
+      <h2 class="section-title">Hablemos</h2>
+      <p class="section-text">
+        Estoy buscando mi primera oportunidad como desarrollador backend.
+        Si mi perfil calza con lo que buscas, escríbeme.
+      </p>
+
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/julio-diaz-henriquez-62b729303/" target="_blank" rel="noopener" class="contact-link">
+          LinkedIn
+        </a>
+        <a href="https://github.com/Rumedan" target="_blank" rel="noopener" class="contact-link">
+          GitHub
+        </a>
+        <a href="mailto:tu-correo-aqui@example.com" class="contact-link">
+          Correo
+        </a>
+      </div>
+      <p class="contact-note">
+        * Reemplaza el correo de arriba por tu dirección real antes de publicar.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="anio"></span> Julio Díaz Henríquez</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/app.js"></script>
 </body>
 </html>
