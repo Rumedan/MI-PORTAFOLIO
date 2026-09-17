@@ -180,6 +180,10 @@ section { padding: 6rem 0; }
 .project-row-link {
   flex-shrink: 0;
   padding-top: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-end;
 }
 .project-row-link a {
   font-weight: 600;
